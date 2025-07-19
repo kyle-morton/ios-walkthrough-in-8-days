@@ -1,0 +1,45 @@
+# Xcode
+build/
+DerivedData/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+*.swp
+*~.nib
+
+# iOS
+Pods/
+.framework/
+*.ipa
+*.dSYM
+*.xcarchive
+
+# Swift Package Manager
+Packages/
+Package.pins
+Package.resolved
+.swiftpm/xcode
+
+# Fastlane
+fastlane/report.xml
+fastlane/screenshots/
+fastlane/test_output/
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Carthage
+Carthage/Build/
+
+# Flutter
+.flutter
