@@ -59,49 +59,49 @@ struct ContentView: View {
     }
 }
 
-struct KMAttemptContentView: View {
-    var body: some View {
-        VStack {
-            HStack{
-                Spacer()
-                Image("logo")
-                Spacer()
-            }
-            HStack{
-                Spacer()
-                Image("card2")
-                Spacer()
-                Image("card3")
-                Spacer()
-            }
-            .padding(25.0)
-            
-            Image("button")
-            
-            HStack{
-                VStack{
-                    Text("Player")
-                        .font(.title)
-                        .padding()
-                    Text("0")
-                        .font(.title)
-                }
-                .padding()
-                
-                VStack{
-                    Text("CPU")
-                        .font(.title)
-                        .padding()
-                    Text("0")
-                        .font(.title)
-                    
-                }
-                .padding()
-                
-            }.foregroundStyle(Color.white)
-        }.background(Image("background-cloth"))
-    }
-}
+//struct KMAttemptContentView: View {
+//    var body: some View {
+//        VStack {
+//            HStack{
+//                Spacer()
+//                Image("logo")
+//                Spacer()
+//            }
+//            HStack{
+//                Spacer()
+//                Image("card2")
+//                Spacer()
+//                Image("card3")
+//                Spacer()
+//            }
+//            .padding(25.0)
+//            
+//            Image("button")
+//            
+//            HStack{
+//                VStack{
+//                    Text("Player")
+//                        .font(.title)
+//                        .padding()
+//                    Text("0")
+//                        .font(.title)
+//                }
+//                .padding()
+//                
+//                VStack{
+//                    Text("CPU")
+//                        .font(.title)
+//                        .padding()
+//                    Text("0")
+//                        .font(.title)
+//                    
+//                }
+//                .padding()
+//                
+//            }.foregroundStyle(Color.white)
+//        }.background(Image("background-cloth"))
+//    }
+//}
 
 #Preview {
     ContentView()
