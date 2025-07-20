@@ -8,6 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    // @State declares something the UI depends on that might change state
+    @State var playerCard = "card14"
+    @State var cpuCard = "card14"
+    
+    @State var playerScore = 0
+    @State var cpuScore = 0
+    
     var body: some View {
         
         ZStack { // 'depth-stack'
@@ -17,37 +25,56 @@ struct ContentView: View {
             
             VStack{
                 Spacer()
+                
                 Image("logo")
-                Spacer()
-                HStack {
-                    Spacer()
-                    Image("card2")
-                    Spacer()
-                    Image("card3")
-                    Spacer()
-                }
-                Spacer()
-                Image("button")
+                
                 Spacer()
                 
                 HStack {
                     Spacer()
+                    
+                    Image(playerCard)
+                    
+                    Spacer()
+                    
+                    Image(cpuCard)
+                    
+                    Spacer()
+                }
+                
+                Spacer()
+                
+                Button(
+                    action: dealCards,
+                    label: {
+                        Image("button")
+                    }
+                )
+                
+                Spacer()
+                
+                HStack {
+                    Spacer()
+                    
                     VStack {
                         Text("Player")
                             .font(.headline)
                             .padding(.bottom, 10.0)
-                        Text("0")
+                        Text(String(playerScore))
                             .font(.largeTitle)
                             
                     }
+                    
                     Spacer()
+                    
                     VStack {
                         Text("CPU")
                             .font(.headline)
                             .padding(.bottom, 10.0)
-                        Text("0")
+                        Text(String(cpuScore))
                             .font(.largeTitle)
                     }
+                    
                     Spacer()
                 }
                 .foregroundStyle(Color.white)
@@ -57,7 +84,30 @@ struct ContentView: View {
         }
         
     }
+    
+    
+    func dealCards() {
+        print("Deal Cards!")
+        
+        //Randomize the player/cpu cards
+        let randomPlayerCard = Int.random(in: 2...14)
+        playerCard = "card" + String(randomPlayerCard)
+        
+        let randomCpuCard = Int.random(in: 2...14)
+        cpuCard = "card" + String(randomCpuCard)
+        
+        // update the scores
+        if (randomPlayerCard > randomCpuCard){
+            playerScore+=1
+        }
+        else if (randomCpuCard > randomPlayerCard){
+            cpuScore+=1
+        }
+            
+    }
 }
+
+
 
 //struct KMAttemptContentView: View {
 //    var body: some View {
